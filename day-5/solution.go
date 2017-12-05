@@ -31,7 +31,11 @@ func main() {
 	for !(pos >= length) {
 		count = count + 1
 		jump := list[pos]
-		list[pos] = list[pos] + 1
+		if jump >= 3 {
+			list[pos] = list[pos] - 1
+		} else {
+			list[pos] = list[pos] + 1
+		}
 		pos = pos + jump
 	}
 	fmt.Printf("It took %d steps", count)
