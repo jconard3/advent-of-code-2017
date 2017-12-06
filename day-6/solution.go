@@ -36,7 +36,7 @@ func main() {
 		banks = redistribute(banks)
 		count = count + 1
 		if seenBefore(banks, record) {
-			fmt.Printf("It took %d redistributions", count)
+			fmt.Printf("It took %d redistributions\n", count)
 			break
 		}
 		record = append(record, banks)
@@ -70,6 +70,7 @@ func seenBefore(banks Bank, record []Bank) bool {
 			if banks[j] != record[i][j] {
 				break
 			} else if j == len(banks)-1 {
+				fmt.Printf("Length of loop was %d\n", len(record)-i)
 				return true
 			}
 		}
