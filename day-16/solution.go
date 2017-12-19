@@ -8,7 +8,7 @@ import (
 	"strings"
 )
 
-var fileInput = "test.txt"
+var fileInput = "input.txt"
 
 func main() {
 	line := make(map[string]int)
@@ -17,6 +17,17 @@ func main() {
 	line["c"] = 2
 	line["d"] = 3
 	line["e"] = 4
+	line["f"] = 5
+	line["g"] = 6
+	line["h"] = 7
+	line["i"] = 8
+	line["j"] = 9
+	line["k"] = 10
+	line["l"] = 11
+	line["m"] = 12
+	line["n"] = 13
+	line["o"] = 14
+	line["p"] = 15
 
 	//open up input
 	f, err := os.Open(fileInput)
